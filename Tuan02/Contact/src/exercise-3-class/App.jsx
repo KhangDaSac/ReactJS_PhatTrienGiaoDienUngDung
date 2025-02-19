@@ -2,8 +2,7 @@ import { use, useState } from "react"
 import ListContact  from "./ListContact"
 
 function App() {
-  const [listContact, setListContact] = useState();
-  setListContact([
+  const [listContact, setListContact] = useState([
     {
       id: 1,
       firstName: 'Chidi',
@@ -32,14 +31,19 @@ function App() {
       phone: '555-113-8388',
       address: "799 William St, Miami, Florida"
     }
-  ])
+  ]);
+
   function handleDelete(id){
       const listContactClone = listContact.filter((contact) => contact.id !== id)
       setListContact(listContactClone);
   }
+
+  function handleDeleteAll(){
+    setListContact([]);
+  }
   return (
     <>
-      <ListContact listContact = {listContact} handleDelete = {handleDelete}></ListContact>
+      <ListContact listContact = {listContact} handleDelete = {handleDelete} handleDeleteAll = {handleDeleteAll}></ListContact>
     </>
   )
 }

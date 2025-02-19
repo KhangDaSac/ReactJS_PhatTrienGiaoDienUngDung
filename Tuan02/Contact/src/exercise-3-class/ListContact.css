@@ -1,5 +1,15 @@
 .list-contact{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     width: 100vw;
+}
+
+.div-detele{
+    padding: 10px;
+    display: flex;
+    justify-content: right;
+    button{
+        background-color: brown;
+        color: white;
+    }
 }

@@ -15,13 +15,3 @@
 .contact div:first-child{
     border-top: none;
 }
-
-.div-detele{
-    padding: 10px;
-    display: flex;
-    justify-content: right;
-    button{
-        background-color: brown;
-        color: white;
-    }
-}

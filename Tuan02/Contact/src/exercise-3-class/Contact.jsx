@@ -4,7 +4,7 @@ class Contact extends React.Component {
 
     render() {
         return <>
-            <div className="contact" key={this.props.contactDetail.id}>
+            <div className="contact">
                 <div>
                     <h1>{this.props.contactDetail.firstName}</h1>
                     <h3>{this.props.contactDetail.lastName}</h3>

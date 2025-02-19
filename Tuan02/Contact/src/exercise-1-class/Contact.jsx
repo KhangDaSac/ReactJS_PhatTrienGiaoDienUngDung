@@ -1,24 +1,19 @@
 import React from "react";
+import './Contact.css';
 
 class Contact extends React.Component {
     render() {
         return <>
-            <div style={{
-                border: '1px solid'
-            }}>
-                <div >
+            <div className="contact">
+                <div>
                     <h1>{this.props.contactDetail.firstName}</h1>
-                    <h2>{this.props.contactDetail.lastName}</h2>
+                    <h3>{this.props.contactDetail.lastName}</h3>
                 </div>
-                <div style={{
-                    'border-top': '1px solid'
-                }}>
-                    Phone: {this.props.contactDetail.phone}
+                <div>
+                    <p>Phone: {this.props.contactDetail.phone}</p>
                 </div>
-                <div style={{
-                    'border-top': '1px solid'
-                }}>
-                    Address: {this.props.contactDetail.address}
+                <div>
+                    <p>Address: {this.props.contactDetail.address}</p>
                 </div>
             </div>
         </>
