@@ -1,8 +1,8 @@
-import ListContact from "./ListContact"
-import React from "react"
+import React, {useState } from "react"
+import ListContact  from "./ListContact"
 
-class App extends React.Component {
-  listContact = [
+const App = () =>{
+  const [listContact, setListContact] = useState([
     {
       id: 1,
       firstName: 'Chidi',
@@ -31,14 +31,21 @@ class App extends React.Component {
       phone: '555-113-8388',
       address: "799 William St, Miami, Florida"
     }
-  ]
-  render() {
+  ])
+
+  const handleDelete = (id) => {
+      const listContactClone =listContact.filter((contact) => contact.id !== id)
+      setListContact(listContactClone);
+  }
+
+  const handleDeleteAll = () => {
+    setListContact([]);
+  }
     return (
       <>
-        <ListContact listContact={this.listContact}></ListContact>
+        <ListContact listContact = {listContact} handleDelete = {handleDelete} handleDeleteAll = {handleDeleteAll}></ListContact>
       </>
     )
-  }
 }
 
 export default App

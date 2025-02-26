@@ -1,8 +1,8 @@
 import ListContact from "./ListContact"
 import React from "react"
 
-class App extends React.Component {
-  listContact = [
+const App = () => {
+  const listContact = [
     {
       id: 1,
       firstName: 'Chidi',
@@ -32,13 +32,12 @@ class App extends React.Component {
       address: "799 William St, Miami, Florida"
     }
   ]
-  render() {
-    return (
-      <>
-        <ListContact listContact={this.listContact}></ListContact>
-      </>
-    )
-  }
+
+  return (
+    <>
+      <ListContact listContact={listContact}></ListContact>
+    </>
+  )
 }
 
 export default App
