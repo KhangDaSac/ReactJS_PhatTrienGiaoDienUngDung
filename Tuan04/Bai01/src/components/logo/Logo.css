@@ -1,0 +1,13 @@
+.group-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1{
+        color: #E53888;
+    }
+
+    svg{
+        fill: #E53888;
+    }
+}
