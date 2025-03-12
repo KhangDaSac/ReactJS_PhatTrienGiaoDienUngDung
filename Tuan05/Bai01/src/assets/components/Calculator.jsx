@@ -86,7 +86,7 @@ const Calculator = () => {
                         onChange={(event) => {
                             dispatch({
                                 number: parseFloat(event.target.value),
-                                type: 'CHANG-FIRST-NUMBER'
+                                type: 'CHANGE-FIRST-NUMBER'
                             })
                         }}
                     />
@@ -98,7 +98,7 @@ const Calculator = () => {
                         onChange={(event) => {
                             dispatch({
                                 number: parseFloat(event.target.value),
-                                type: 'CHANG-SECOND-NUMBER'
+                                type: 'CHANGE-SECOND-NUMBER'
                             })
                         }}
                     />
