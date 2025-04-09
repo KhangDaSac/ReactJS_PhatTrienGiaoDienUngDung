@@ -15,9 +15,9 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   const location = useLocation();
-  
+
   const getPageTitle = () => {
-    switch(location.pathname) {
+    switch (location.pathname) {
       case '/':
       case '/dashboard':
         return 'Dashboard';
@@ -38,21 +38,21 @@ function App() {
 
   return (
     <>
-    <div className='container shadow-lg'>
-    <Header title={getPageTitle()}/>
-    <Menu class="menu"/>
-    
-      <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/analytics" element={<Analytics />} />
-        <Route path="/project" element={<Project />} />
-        <Route path="/team" element={<Teams />} />
-        <Route path="/message" element={<Messages />} />
-        <Route path="/integration" element={<Integrations />} />
-      </Routes>
-    
-    </div>
+      <div className='container'>
+        <Header title={getPageTitle()} />
+        <Menu class="menu" />
+
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/analytics" element={<Analytics />} />
+          <Route path="/project" element={<Project />} />
+          <Route path="/team" element={<Teams />} />
+          <Route path="/message" element={<Messages />} />
+          <Route path="/integration" element={<Integrations />} />
+        </Routes>
+
+      </div>
     </>
   )
 }
