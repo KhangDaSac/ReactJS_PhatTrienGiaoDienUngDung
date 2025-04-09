@@ -1,4 +1,47 @@
-.is-active{
-    background-color: #E53888;
-    color: #FFF;
+.container {
+  display: grid;
+  grid-template-areas:
+    "menu header"
+    "menu content"
+    "footer footer";
+  
+  padding: 0 !important;
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  width: 100vw;
+}
+
+.container > div.header {
+  grid-area: header;
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid #dcd7d7;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container > div.menu {
+  grid-area: menu;
+  padding: 10px;
+  border: none;
+  border-right: 1px solid #dcd7d7;
+  
+  overflow-y: auto;
+}
+
+.container > div.content {
+  grid-area: content;
+  padding: 20px;
+
+  overflow-y: auto;
+}
+
+.container > div.footer {
+  grid-area: footer;
+  border-top: 1px solid #dcd7d7;
+  padding: 10px;
+  text-align: center;
 }

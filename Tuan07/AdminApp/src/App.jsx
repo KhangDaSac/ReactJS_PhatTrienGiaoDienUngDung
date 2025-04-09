@@ -1,11 +1,26 @@
 import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
 import './App.css'
-import AdminApp from './AdminApp'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Menu from './component/Menu'
+import Header from './component/Header'
+import Content from './component/Content'
 function App() {
+  const [count, setCount] = useState(0)
+
   return (
     <>
-      <AdminApp></AdminApp>
+    <div className='container shadow-lg'>
+    <Header className="header"/>
+    <Menu class="menu"/>
+    <Content className="content"/>
+    </div>
+    
+   
+    
+    
+     
+       
     </>
   )
 }
