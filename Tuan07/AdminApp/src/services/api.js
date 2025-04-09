@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-const API_URL = 'https://api.example.com'; 
+const API_URL = 'https://api.example.com'; // Replace with your actual API URL
 
 const api = {
-
+    // Get overview data
     getOverview: async () => {
         try {
             const response = await axios.get(`${API_URL}/overview`);
@@ -14,7 +14,7 @@ const api = {
         }
     },
 
-
+    // Get users data
     getUsers: async (page = 1, limit = 6) => {
         try {
             const response = await axios.get(`${API_URL}/users`, {
@@ -27,7 +27,7 @@ const api = {
         }
     },
 
-
+    // Update user
     updateUser: async (userId, userData) => {
         try {
             const response = await axios.put(`${API_URL}/users/${userId}`, userData);
@@ -38,7 +38,7 @@ const api = {
         }
     },
 
-
+    // Add new user
     addUser: async (userData) => {
         try {
             const response = await axios.post(`${API_URL}/users`, userData);
