@@ -76,7 +76,7 @@
       "status": "New"
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "àdasdf",
       "company": "ádfafsd",
       "orderValue": "4",
@@ -85,13 +85,22 @@
       "image": "adsfad"
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "àddasdf",
       "company": "Company F",
       "orderValue": "3",
       "orderDate": "2025-04-07",
       "status": "New",
       "image": "https://res.cloudinary.com/daoanjou9/image/upload/v1744181734/customer/srifa9xk6fj9kauyemua.png"
+    },
+    {
+      "id": 10,
+      "name": "gggg",
+      "company": "1",
+      "orderValue": "1",
+      "orderDate": "0011-11-11",
+      "status": "in-progress",
+      "image": "1"
     }
   ]
 }

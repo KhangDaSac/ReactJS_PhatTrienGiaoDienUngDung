@@ -38,7 +38,7 @@ const Menu = () => {
             </Nav>
 
             <div
-                style={{ backgroundColor: "#D1E9F6", height: "400px" }}
+                style={{ backgroundColor: "#D1E9F6", height: "350px" }}
                 className="d-flex justify-content-center align-items-center p-5 mt-5"
             >
                 <div
@@ -50,13 +50,7 @@ const Menu = () => {
                 >
                     <p style={{ fontWeight: "bold", marginTop: "280px" }}>V2.0 is available</p>
                     <button
-                        style={{
-                            color: "#5B99C2",
-                            backgroundColor: "white",
-                            borderColor: "#5B99C2",
-                            width: "150px",
-                            height: "40px"
-                        }}
+                        className="btn btn-primary"
                     >
                         Try now
                     </button>

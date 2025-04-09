@@ -155,9 +155,6 @@ const Dashboard = () => {
                         margin: '0 5px',
                         padding: '5px 10px',
                         border: '1px solid #ddd',
-                        width: '40px',
-                        height: '40px',
-                        borderRadius: '50%',
                         backgroundColor: currentPage === 1 ? '#FF4E88' : 'white',
                         color: currentPage === 1 ? 'white' : 'black'
                     }}
@@ -177,12 +174,10 @@ const Dashboard = () => {
                     onClick={() => handlePageChange(i)}
                     className={currentPage === i ? 'active' : ''}
                     style={{
-                        margin: '0 5px',
-                        padding: '5px 10px',
+                        margin: '5px',
+                        padding: '5px 15px',
                         border: '1px solid #ddd',
-                        width: '40px',
-                        height: '40px',
-                        borderRadius: '50%',
+                        borderRadius: '10%',
                         backgroundColor: currentPage === i ? '#FF4E88' : 'white',
                         color: currentPage === i ? 'white' : 'black'
                     }}
@@ -372,8 +367,7 @@ const Dashboard = () => {
                             margin: '0 5px',
                             padding: '5px 10px',
                             border: 'none',
-                            backgroundColor: 'transparent',
-                            borderRadius: '4px'
+                            backgroundColor: 'transparent'
                         }}
                     >
                         &lt;
@@ -386,8 +380,7 @@ const Dashboard = () => {
                             margin: '0 5px',
                             padding: '5px 10px',
                             border: 'none',
-                            backgroundColor: 'transparent',
-                            borderRadius: '4px'
+                            backgroundColor: 'transparent'
                         }}
                     >
                         &gt;
