@@ -40,7 +40,6 @@ const Dashboard = () => {
   const fetchTurnover = async () => {
     try {
       const response = await fetch('http://localhost:3000/turnover');
-      if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
       const data = await response.json();
       setTurnover(data);
     } catch (error) {
@@ -51,7 +50,6 @@ const Dashboard = () => {
   const fetchProfit = async () => {
     try {
       const response = await fetch('http://localhost:3000/profit');
-      if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
       const data = await response.json();
       setProfit(data);
     } catch (error) {
@@ -62,7 +60,6 @@ const Dashboard = () => {
   const fetchNewCustomer = async () => {
     try {
       const response = await fetch('http://localhost:3000/new_customer');
-      if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
       const data = await response.json();
       setNewCustomer(data);
     } catch (error) {
@@ -73,7 +70,6 @@ const Dashboard = () => {
   const fetchOrders = async () => {
     try {
       const response = await fetch('http://localhost:3000/orders');
-      if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
       const data = await response.json();
       setOrders(data);
     } catch (error) {
@@ -123,7 +119,6 @@ const Dashboard = () => {
         },
         body: JSON.stringify(selectedOrder),
       });
-      if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
       const updatedOrder = await response.json();
       setOrders(orders.map((order) => (order.id === updatedOrder.id ? updatedOrder : order)));
       handleCloseEditModal();
@@ -141,7 +136,6 @@ const Dashboard = () => {
         },
         body: JSON.stringify(newOrder),
       });
-      if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
       const addedOrder = await response.json();
       setOrders([...orders, addedOrder]);
       handleCloseAddModal();
