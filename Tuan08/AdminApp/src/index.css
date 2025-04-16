@@ -1,0 +1,14 @@
+* {
+  padding: auto;
+  margin: auto;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+li{
+  list-style-type: none;
+}
+
+ul{
+  padding: 0;
+}

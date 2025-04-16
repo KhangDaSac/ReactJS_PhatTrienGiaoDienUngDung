@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+    h2{
+        color: #f44b87;
+    }
+}
+
+.header-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 2;
+    gap: 15px;
+}
+
+.header-right input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 50%;
+    background-color: #f3f4f6;
+    min-height: 35px;
+    padding: 8px;
+    font-size: 16px;
+}
+
