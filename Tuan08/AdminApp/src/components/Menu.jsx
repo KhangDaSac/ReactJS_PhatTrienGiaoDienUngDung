@@ -4,7 +4,7 @@ import logo from '../assets/images/Image 1858.png'
 import project from '../assets/images/Folder.png'
 import team from '../assets/images/Groups.png'
 import analytics from '../assets/images/Pie chart.png'
-import messages from '../assets/images/Messages.png'
+import messages from '../assets/images/Chat.png'
 import integrations from '../assets/images/Code.png'
 
 import image from '../assets/images/Group.png'
