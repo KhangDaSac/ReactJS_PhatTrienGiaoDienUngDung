@@ -65,6 +65,33 @@
       "orderDate": "10/06/2023",
       "status": "Completed",
       "avatar": "../../public/avatars/Avatar.png"
+    },
+    {
+      "id": "14a6",
+      "customerName": "12222222",
+      "company": "4\\5\\75\\",
+      "orderValue": "025534",
+      "orderDate": "1111-11-11",
+      "status": "New",
+      "avatar": ""
+    },
+    {
+      "id": "c818",
+      "customerName": "rtstsh",
+      "company": "dfgsdg",
+      "orderValue": "3",
+      "orderDate": "1111-11-11",
+      "status": "New",
+      "avatar": "/uploads/Screenshot_2025-04-16_134409-removebg-preview.png"
+    },
+    {
+      "id": "b000",
+      "customerName": "dgdsh",
+      "company": "sdfgdfsg",
+      "orderValue": "05",
+      "orderDate": "1111-11-11",
+      "status": "In-progress",
+      "avatar": ""
     }
   ]
 }
