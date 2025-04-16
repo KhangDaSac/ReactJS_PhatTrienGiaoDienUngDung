@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Menu from './components/Menu'
 import Header from './components/Header'
+import Dashboard from './pages/Dashboard'
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
             <Menu></Menu>
           </div>
           <div class="content">
-            
+            <Dashboard></Dashboard>
           </div>
 
         </div>

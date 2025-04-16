@@ -1,0 +1,46 @@
+.dashboards{
+    display: flex;
+    align-items: self-start;
+    justify-content: center;
+    height: 100vh;
+}
+
+.dashboard{
+    padding: 30px;
+    display: flex;
+    margin: 10px;
+    border-radius: 10px;
+    div{
+        padding: 0 25px;
+        p > span{
+            color: #117b34;
+            margin-right: 5px;
+        }
+        * {
+            margin: 10px 0;
+        }
+    }
+}
+
+.dashboard-turnover{
+    background-color: #fef0f5;
+}
+
+.dashboard-profit{
+    background-color: #f0f6ff;
+}
+
+.dashboard-new-customer{
+    background-color: #f1f8fd;
+}
+
+.overview{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    img{
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+    }
+}

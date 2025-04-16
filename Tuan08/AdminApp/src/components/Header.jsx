@@ -9,9 +9,9 @@ const Header = () => {
     return (
         <div className='header'>
             <div className='header-left'>
-                <h2>
+                <h1>
                     Dashboard
-                </h2>
+                </h1>
             </div>
 
             <div className='header-right'>
