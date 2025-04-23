@@ -1,8 +1,8 @@
-import React from 'react';
-import { Container, Table, Button } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Container, Table, Button, Form, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const products = [
+const initialProducts = [
   {
     product_name: "Men's T-shirt",
     price: 150000,
@@ -36,13 +36,109 @@ const products = [
 ];
 
 const App = () => {
+  const [products, setProducts] = useState(initialProducts);
+  const [newProduct, setNewProduct] = useState({
+    product_name: '',
+    price: '',
+    category: '',
+    stock: ''
+  });
+
   const handleDelete = (productName) => {
     alert(`Delete ${productName}`);
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setNewProduct({ ...newProduct, [name]: value });
+  };
+
+  const handleAddProduct = () => {
+    if (
+      newProduct.product_name &&
+      newProduct.price &&
+      newProduct.category &&
+      newProduct.stock
+    ) {
+      setProducts([
+        ...products,
+        {
+          ...newProduct,
+          price: parseFloat(newProduct.price),
+          stock: parseInt(newProduct.stock)
+        }
+      ]);
+      setNewProduct({
+        product_name: '',
+        price: '',
+        category: '',
+        stock: ''
+      });
+    } else {
+      alert('Please fill in all fields');
+    }
   };
 
   return (
     <Container className="mt-5">
       <h2>Product List</h2>
+      <Form className="mb-4">
+        <Row>
+          <Col md={3}>
+            <Form.Group>
+              <Form.Label>Product Name</Form.Label>
+              <Form.Control
+                type="text"
+                name="product_name"
+                value={newProduct.product_name}
+                onChange={handleInputChange}
+                placeholder="Enter product name"
+              />
+            </Form.Group>
+          </Col>
+          <Col md={2}>
+            <Form.Group>
+              <Form.Label>Price</Form.Label>
+              <Form.Control
+                type="number"
+                name="price"
+                value={newProduct.price}
+                onChange={handleInputChange}
+                placeholder="Enter price"
+              />
+            </Form.Group>
+          </Col>
+          <Col md={3}>
+            <Form.Group>
+              <Form.Label>Category</Form.Label>
+              <Form.Control
+                type="text"
+                name="category"
+                value={newProduct.category}
+                onChange={handleInputChange}
+                placeholder="Enter category"
+              />
+            </Form.Group>
+          </Col>
+          <Col md={2}>
+            <Form.Group>
+              <Form.Label>Stock</Form.Label>
+              <Form.Control
+                type="number"
+                name="stock"
+                value={newProduct.stock}
+                onChange={handleInputChange}
+                placeholder="Enter stock"
+              />
+            </Form.Group>
+          </Col>
+          <Col md={2} className="d-flex align-items-end">
+            <Button variant="primary" onClick={handleAddProduct}>
+              Add Product
+            </Button>
+          </Col>
+        </Row>
+      </Form>
       <Table striped bordered hover responsive>
         <thead>
           <tr>
