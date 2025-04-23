@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Table, Button, Form, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -44,7 +44,10 @@ const initialProducts = [
 const categories = ["Tất cả", "Thời trang", "Công nghệ", "Gia dụng"];
 
 const App = () => {
-  const [products, setProducts] = useState(initialProducts);
+  const [products, setProducts] = useState(() => {
+    const savedProducts = localStorage.getItem('products');
+    return savedProducts ? JSON.parse(savedProducts) : initialProducts;
+  });
   const [newProduct, setNewProduct] = useState({
     product_name: '',
     price: '',
@@ -53,6 +56,10 @@ const App = () => {
   });
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('Tất cả');
+
+  useEffect(() => {
+    localStorage.setItem('products', JSON.stringify(products));
+  }, [products]);
 
   const handleDelete = (productName) => {
     const updatedProducts = products.filter(
