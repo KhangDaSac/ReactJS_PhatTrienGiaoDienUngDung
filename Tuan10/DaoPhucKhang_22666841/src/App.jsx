@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container, Table, Button, Form, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ProductItem from './components/ProductItem';
+
 const initialProducts = [
   {
     product_name: "Áo thun nam",
@@ -41,7 +42,7 @@ const initialProducts = [
   }
 ];
 
-const categories = ["Tất cả", "Thời trang", "Công nghệ", "Gia dụng"];
+const categories = ["Thời trang", "Công nghệ", "Gia dụng"];
 
 const App = () => {
   const [products, setProducts] = useState(() => {
@@ -151,13 +152,18 @@ const App = () => {
           <Col md={3}>
             <Form.Group>
               <Form.Label>Danh mục</Form.Label>
-              <Form.Control
-                type="text"
+              <Form.Select
                 name="category"
                 value={newProduct.category}
                 onChange={handleInputChange}
-                placeholder="Nhập danh mục"
-              />
+              >
+                <option value="">Chọn danh mục</option>
+                {categories.map((category, index) => (
+                  <option key={index} value={category}>
+                    {category}
+                  </option>
+                ))}
+              </Form.Select>
             </Form.Group>
           </Col>
           <Col md={2}>
@@ -197,6 +203,7 @@ const App = () => {
                 value={selectedCategory}
                 onChange={handleCategoryChange}
               >
+                <option value="Tất cả">Tất cả</option>
                 {categories.map((category, index) => (
                   <option key={index} value={category}>
                     {category}
