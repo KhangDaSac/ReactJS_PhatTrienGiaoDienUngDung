@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Container, Table, Button, Form, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ProductItem from './components/ProductItem';
-
 const initialProducts = [
   {
     product_name: "Áo thun nam",
