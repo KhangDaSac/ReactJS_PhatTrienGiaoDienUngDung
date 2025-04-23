@@ -109,6 +109,9 @@ const App = () => {
     return matchesSearch && matchesCategory;
   });
 
+  const totalProducts = filteredProducts.length;
+  const totalStock = filteredProducts.reduce((sum, product) => sum + product.stock, 0);
+
   return (
     <Container className="mt-5">
       <h2>Danh sách sản phẩm</h2>
@@ -197,6 +200,9 @@ const App = () => {
           </Col>
         </Row>
       </Form>
+      <div className="mb-3">
+        <strong>Tổng sản phẩm: {totalProducts} | Tổng tồn kho: {totalStock}</strong>
+      </div>
       <Table striped bordered hover responsive>
         <thead>
           <tr>
