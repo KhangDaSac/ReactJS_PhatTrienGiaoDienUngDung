@@ -43,6 +43,7 @@ const App = () => {
     category: '',
     stock: ''
   });
+  const [searchTerm, setSearchTerm] = useState('');
 
   const handleDelete = (productName) => {
     const updatedProducts = products.filter(
@@ -81,6 +82,14 @@ const App = () => {
       alert('Please fill in all fields');
     }
   };
+
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const filteredProducts = products.filter((product) =>
+    product.product_name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <Container className="mt-5">
@@ -141,6 +150,19 @@ const App = () => {
             </Button>
           </Col>
         </Row>
+        <Row className="mt-3">
+          <Col md={6}>
+            <Form.Group>
+              <Form.Label>Search Product</Form.Label>
+              <Form.Control
+                type="text"
+                value={searchTerm}
+                onChange={handleSearch}
+                placeholder="Enter product name to search"
+              />
+            </Form.Group>
+          </Col>
+        </Row>
       </Form>
       <Table striped bordered hover responsive>
         <thead>
@@ -153,7 +175,7 @@ const App = () => {
           </tr>
         </thead>
         <tbody>
-          {products.map((product, index) => (
+          {filteredProducts.map((product, index) => (
             <tr key={index}>
               <td>{product.product_name}</td>
               <td>{product.price.toLocaleString()} VND</td>
