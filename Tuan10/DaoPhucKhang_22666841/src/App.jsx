@@ -45,7 +45,10 @@ const App = () => {
   });
 
   const handleDelete = (productName) => {
-    alert(`Delete ${productName}`);
+    const updatedProducts = products.filter(
+      (product) => product.product_name !== productName
+    );
+    setProducts(updatedProducts);
   };
 
   const handleInputChange = (e) => {
