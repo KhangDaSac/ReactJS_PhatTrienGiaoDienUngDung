@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Table, Button, Form, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ProductItem from './components/ProductItem';
 
 const initialProducts = [
   {
@@ -222,21 +223,11 @@ const App = () => {
         </thead>
         <tbody>
           {filteredProducts.map((product, index) => (
-            <tr key={index}>
-              <td>{product.product_name}</td>
-              <td>{product.price.toLocaleString()} VND</td>
-              <td>{product.category}</td>
-              <td>{product.stock}</td>
-              <td>
-                <Button 
-                  variant="danger" 
-                  size="sm" 
-                  onClick={() => handleDelete(product.product_name)}
-                >
-                  Xóa
-                </Button>
-              </td>
-            </tr>
+            <ProductItem
+              key={index}
+              product={product}
+              onDelete={handleDelete}
+            />
           ))}
         </tbody>
       </Table>
